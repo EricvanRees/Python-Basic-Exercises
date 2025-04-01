@@ -8,4 +8,11 @@ Current date and time :
 
 import datetime
 
-print(f"Current date and time : \n {datetime.datetime.now()}")
+def format_time():
+    t = datetime.datetime.now()
+    s = t.isoformat(timespec='seconds')
+    newstr = s.replace('T', ' ')
+    return newstr
+
+
+print(format_time())
