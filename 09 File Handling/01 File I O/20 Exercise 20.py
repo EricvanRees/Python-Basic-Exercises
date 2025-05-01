@@ -4,9 +4,8 @@ Write a Python program to generate 26 text files named A.txt, B.txt, and so on u
 
 for _ in range(26):
   file_name = str(_) + ".txt"
-  file = open(file_name, "w")
-  file.write("This is the first line.")
-  file.close()
-  print(f"Created filename: {file_name}")
+  with open(file_name, "w") as file:
+    file.write("This is the first line.")
+    print(f"Created filename: {file_name}")
   
   
