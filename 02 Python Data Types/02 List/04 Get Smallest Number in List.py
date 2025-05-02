@@ -9,7 +9,7 @@ def get_smallest(anylist):
       smallest = num
     else:
       continue
-    
+  
   return smallest
 
 print(get_smallest([10, -100, 20, -20]))
