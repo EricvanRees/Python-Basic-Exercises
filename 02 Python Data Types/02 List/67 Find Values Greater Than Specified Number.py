@@ -3,11 +3,14 @@ Write a Python program to find all the values in a list that are greater than a 
 """
 
 def find_vals(alist, anum):
-  newlist = []
+  """ newlist = []
   for num in alist:
     if num > anum:
       newlist.append(num)
     
-  return newlist
+  return newlist """
+  
+  # using list comprehension
+  return [num for num in alist if num > anum]
     
 print(find_vals([1,2,3,4,5], 3))
