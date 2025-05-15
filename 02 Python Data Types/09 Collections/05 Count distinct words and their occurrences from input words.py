@@ -18,13 +18,14 @@ def count_input(myinputstr):
     mylist = myinputstr.split(" ")
     word_tot = len(mylist)
     counterobj = Counter(mylist)
+    list_counterobj = list(counterobj.values())
     myordereddict = OrderedDict.fromkeys(mylist)
     res = list(myordereddict)
     print(f" Input number of words: {word_tot}")
     for key in res:
         print(key)
     print(len(res))
-    print(list(counterobj.values()))
+    print(*list_counterobj, sep=',')
 
 
 count_input("Red Green Blue Black White")
