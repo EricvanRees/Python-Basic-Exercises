@@ -21,7 +21,7 @@ def count_input(myinputstr):
     list_counterobj = list(counterobj.values())
     myordereddict = OrderedDict.fromkeys(mylist)
     res = list(myordereddict)
-    print(f" Input number of words: {word_tot}")
+    print(f"Input number of words: {word_tot}")
     for key in res:
         print(key)
     print(len(res))
