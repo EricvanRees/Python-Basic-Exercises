@@ -2,28 +2,19 @@
 Write a Python program that displays messages in a messagebox using Tkinter.
 """
 
-import tkinter as tk 
-from tkinter import ttk
+from tkinter import *
+from tkinter import messagebox
 
-window = tk.Tk()
+window = Tk()
 window.geometry('600x400')
 window.title('New Window')
-window.configure(background='#4d4dff')
+window.configure(background='#6666ff')
 
-def show():
-  text = textbox.get()
-  label['text'] = text
 
-# textbox
-textbox = ttk.Entry(window, font=('Tahoma', 15))
-textbox.pack(pady=20)
-
-# add a button
-button = ttk.Button(window, text='Send', command=show)
-button.pack(pady=20)
-
-# add a label
-label = ttk.Label(window, text='Initial value')
-label.pack(pady=20)
+question = messagebox.askyesno(title="question", message="Show message?")
+if (question == True):
+    messagebox.showinfo("showinfo", "Have a great day!")
+else:
+    messagebox.showwarning("showwarning", "Are you sure?")
 
 window.mainloop()
