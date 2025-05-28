@@ -15,6 +15,6 @@ question = messagebox.askyesno(title="question", message="Show message?")
 if (question == True):
     messagebox.showinfo("showinfo", "Have a great day!")
 else:
-    messagebox.showwarning("showwarning", "Are you sure?")
+    messagebox.showwarning("Warning Box!", "Are you sure?")
 
 window.mainloop()
